@@ -1,8 +1,8 @@
-import {isArray, isFunction, isPlainObject, isString, get, has} from 'lodash/isArray'
+import { isArray, isFunction, isPlainObject, isString, get, has } from 'lodash-es'
 import template from './template'
 
 // Ex: fieldsToStr([{label: 'Địa chỉ {{order}}', value: 'diachi'}], '<li><b>{{label}}</b>: {{value}}</li>', data)
-const fieldsToStr = (fields, tpl, data = {})  =>{
+const fieldsToStr = (fields, tpl, data = {}) => {
     let str = ''
 
     if (!isArray(fields)) return []
