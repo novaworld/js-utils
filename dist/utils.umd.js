@@ -975,6 +975,14 @@
       return (prefix || '') + shortid.generate() || suffix || '';
     }
 
+    uniqid.isValid = function (id) {
+      return shortid.isValid(id);
+    };
+
+    uniqid.seed = function (_int) {
+      return shortid.seed(_int);
+    };
+
     function getOrValue(object, path, defaultValue) {
       if (lodashEs.isArray(path)) {
         var _iteratorNormalCompletion = true;
